@@ -1,0 +1,25 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Deep Work",
+      "author": "Cal Newport",
+      "summary": "Deep Work: Rules for Focused Success in a Distracted World” by Cal Newport (Book Summary) Deep Work by Cal Newport is a book about the science of productivity. Cal argues the best way to get more meaningful work done is by working deeply – working in a state of high concentration without distractions on a single task",
+      "year": "2010"
+    },
+    {
+      "id": 2,
+      "title": "1984",
+      "author": "George Orwell",
+      "summary": "Nineteen Eighty-Four is a dystopian social science fiction novel and cautionary tale written by English writer George Orwell. It was published on 8 June 1949 by Secker & Warburg as Orwell's ninth and final book completed in his lifetime.",
+      "year": "1950"
+    },
+    {
+      "id": 3,
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "summary": "lorem ipusm",
+      "year": "2009"
+    }
+  ]
+}
