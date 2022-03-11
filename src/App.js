@@ -116,20 +116,29 @@ function App() {
       <NavBar />
       <div className='App'>
         <Switch>
-          <Route exact path='/react-exercise-book-app'>
+          <Route path='/react-exercise-book-app' exact component={Home}>
             <Home books={books} onDelete={onDelete} />
           </Route>
 
-          <Route path='/addbook'>
+          <Route path='/react-exercise-book-app/addbook'>
             <AddBook books={books} addbook={addbook} />
           </Route>
 
-          <Route path='/books/:id'>
+          <Route
+            path='/react-exercise-book-app/books/:id'
+            exact
+            component={BookDetails}
+          >
             <BookDetails books={books} />
           </Route>
 
-          <Route path='/editbook/:id'>
-            <EditBook books={books} editbook={editbook} />
+          <Route path='/react-exercise-book-app/editbook/:id'>
+            <EditBook
+              books={books}
+              editbook={editbook}
+              exact
+              component={EditBook}
+            />
           </Route>
         </Switch>
       </div>

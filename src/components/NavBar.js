@@ -23,7 +23,7 @@ const NavBar = () => {
           </Link>
         </li>
         <li className='nav-item'>
-          <Link className='nav-link' to='/addbook'>
+          <Link className='nav-link' to='/react-exercise-book-app/addbook'>
             Add Book
           </Link>
         </li>
