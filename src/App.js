@@ -4,7 +4,7 @@ import AddBook from "./components/AddBook";
 import EditBook from "./components/EditBook";
 import BookDetails from "./components/BookDetails";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import bootstrap from "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
@@ -112,7 +112,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <HashRouter basename='/'>
       <NavBar />
       <div className='App'>
         <Switch>
@@ -142,7 +142,7 @@ function App() {
           </Route>
         </Switch>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
