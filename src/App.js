@@ -116,7 +116,7 @@ function App() {
       <NavBar />
       <div className='App'>
         <Switch>
-          <Route exact path='/'>
+          <Route exact path='/react-exercise-book-app'>
             <Home books={books} onDelete={onDelete} />
           </Route>
 
