@@ -12,10 +12,16 @@ const EditBook = (props) => {
   const [summary, setSummary] = useState(c);
   const [year, setYear] = useState(d);
   const book = { id, title, author, summary, year };
+  // For message alert
+  const container = document.querySelector(".container");
+  const inputs = document.querySelectorAll(".form-control");
 
   return (
-    <div className='w-75 m-auto'>
-      <form id='book-form' onSubmit={(e) => props.editbook(e, book)}>
+    <div className='container w-75 m-auto'>
+      <form
+        id='book-form'
+        onSubmit={(e) => props.editbook(e, book, container, inputs)}
+      >
         <div className='form-group'>
           <label>Title</label>
           <input

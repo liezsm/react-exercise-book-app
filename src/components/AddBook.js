@@ -10,10 +10,14 @@ const AddBook = (props) => {
   const id = props.books.length + 1;
 
   const newBook = { id, title, author, summary, year };
-
+  const container = document.querySelector(".container");
+  const inputs = document.querySelectorAll(".form-control");
   return (
-    <div className='w-75 m-auto'>
-      <form id='book-form' onSubmit={(e, books) => props.addbook(e, newBook)}>
+    <div className=' container w-75 m-auto'>
+      <form
+        id='book-form'
+        onSubmit={(e, books) => props.addbook(e, newBook, container, inputs)}
+      >
         <div className='form-group'>
           <label>Title</label>
           <input

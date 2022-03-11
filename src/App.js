@@ -39,19 +39,50 @@ function App() {
   const [books, setBooks] = useState(data);
   const [deleted, hasDeleted] = useState(false);
   const history = useHistory();
-  const addbook = (e, newBook) => {
-    e.preventDefault();
-    setBooks((prevBooks) => [...prevBooks, newBook]);
 
-    fetch("src/data/books.json")
-      .then((resp) => resp.json())
-      .then((data) => {
-        console.log(data);
-        history.push("/");
+  function showAlert(message, className, parent, container, inputsToClear) {
+    const div = document.createElement("div");
+    div.className = `alert alert-${className} text-${className}`;
+    div.appendChild(document.createTextNode(message));
+    const form = document.querySelector(`${parent}`);
+    container.insertBefore(div, form);
+
+    setTimeout(() => {
+      container.removeChild(div);
+      inputsToClear.forEach((i) => {
+        i.value = "";
       });
+    }, 1500);
+  }
+
+  function showMessageDeleteItem(message, className) {
+    const parent = document.querySelector(".App");
+    const container = parent.firstChild;
+    const table = container.firstElementChild;
+
+    const div = document.createElement("div");
+    div.className = `text-center alert alert-${className} text-${className}`;
+    div.appendChild(document.createTextNode(message));
+    container.insertBefore(div, table);
+
+    setTimeout(() => {
+      container.removeChild(div);
+    }, 1500);
+  }
+  const addbook = (e, newBook, container, inputs) => {
+    e.preventDefault();
+    console.log(inputs);
+    setBooks((prevBooks) => [...prevBooks, newBook]);
+    showAlert(
+      "Added successfully",
+      "success",
+      `#${e.target.id}`,
+      container,
+      inputs
+    );
   };
 
-  const editbook = (e, updatebook) => {
+  const editbook = (e, updatebook, container, inputs) => {
     e.preventDefault();
     setBooks((prevBooks) => {
       return prevBooks.map((book) => {
@@ -63,17 +94,23 @@ function App() {
         return book;
       });
     });
+    showAlert(
+      "Updated successfully",
+      "success",
+      `#${e.target.id}`,
+      container,
+      inputs
+    );
   };
 
   const onDelete = (e, id) => {
-    console.log("clicked", e.target, id);
     setBooks((prevBooks) => {
       return prevBooks.filter((book) => book.id !== id);
     });
+    showMessageDeleteItem("Deleted successfully", "success");
     hasDeleted(true);
   };
 
-  console.log(books);
   return (
     <Router>
       <NavBar />
