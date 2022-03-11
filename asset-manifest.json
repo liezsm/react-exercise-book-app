@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-exercise-book-app/static/css/main.e5aa0971.css",
-    "main.js": "/react-exercise-book-app/static/js/main.7c7f7314.js",
+    "main.js": "/react-exercise-book-app/static/js/main.f85d1f26.js",
     "static/js/787.fb67f53c.chunk.js": "/react-exercise-book-app/static/js/787.fb67f53c.chunk.js",
     "index.html": "/react-exercise-book-app/index.html",
     "main.e5aa0971.css.map": "/react-exercise-book-app/static/css/main.e5aa0971.css.map",
-    "main.7c7f7314.js.map": "/react-exercise-book-app/static/js/main.7c7f7314.js.map",
+    "main.f85d1f26.js.map": "/react-exercise-book-app/static/js/main.f85d1f26.js.map",
     "787.fb67f53c.chunk.js.map": "/react-exercise-book-app/static/js/787.fb67f53c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e5aa0971.css",
-    "static/js/main.7c7f7314.js"
+    "static/js/main.f85d1f26.js"
   ]
 }
