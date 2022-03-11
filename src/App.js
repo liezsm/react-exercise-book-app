@@ -112,23 +112,31 @@ function App() {
   };
 
   return (
-    <HashRouter basename='/'>
+    <HashRouter basename='/react-exercise-book-app'>
       <NavBar />
       <div className='App'>
         <Switch>
-          <Route path='/' exact component={Home}>
+          <Route path='/react-exercise-book-app' exact component={Home}>
             <Home books={books} onDelete={onDelete} />
           </Route>
 
-          <Route path='/addbook'>
+          <Route path='/react-exercise-book-app/addbook'>
             <AddBook books={books} addbook={addbook} />
           </Route>
 
-          <Route path='/books/:id' exact component={BookDetails}>
+          <Route
+            path='/react-exercise-book-app/books/:id'
+            exact
+            component={BookDetails}
+          >
             <BookDetails books={books} />
           </Route>
 
-          <Route path='/editbook/:id' exact component={EditBook}>
+          <Route
+            path='/react-exercise-book-app/editbook/:id'
+            exact
+            component={EditBook}
+          >
             <EditBook books={books} editbook={editbook} />
           </Route>
         </Switch>
