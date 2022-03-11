@@ -14,16 +14,12 @@ const NavBar = () => {
 
       <ul className='nav'>
         <li className='nav-item'>
-          <Link
-            className='nav-link active'
-            aria-current='page'
-            to='/react-exercise-book-app'
-          >
+          <Link className='nav-link active' aria-current='page' to='/'>
             Home
           </Link>
         </li>
         <li className='nav-item'>
-          <Link className='nav-link' to='/react-exercise-book-app/addbook'>
+          <Link className='nav-link' to='/addbook'>
             Add Book
           </Link>
         </li>
