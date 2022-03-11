@@ -120,15 +120,15 @@ function App() {
             <Home books={books} onDelete={onDelete} />
           </Route>
 
-          <Route path='/react-exercise-book-app/addbook'>
+          <Route path='/addbook'>
             <AddBook books={books} addbook={addbook} />
           </Route>
 
-          <Route path='/react-exercise-book-app/books/:id'>
+          <Route path='/books/:id'>
             <BookDetails books={books} />
           </Route>
 
-          <Route path='/react-exercise-book-app/editbook/:id'>
+          <Route path='/editbook/:id'>
             <EditBook books={books} editbook={editbook} />
           </Route>
         </Switch>
